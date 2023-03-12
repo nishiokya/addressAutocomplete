@@ -7,15 +7,15 @@ W3Cの住所autocompletionは、ウェブフォームの自動入力機能を改
 
 |autocomplete属性	|説明	|日本の住所でのサンプル|
 |---|---|---|
-|street-address	|番地と建物名を含む住所の自動入力	|東京都渋谷区神南1-1-1 渋谷ヒカリエ21階|
-|address-line1|	番地を含む住所の自動入力	|東京都渋谷区神南1-1-1|
+|street-address	|番地と建物名を含む住所.※市町村名、郵便番号、国名は含めるべきではありません	|神南1-1-1 渋谷ヒカリエ21階|
+|address-line1|	番地を含む住所　street-addresがない場合のみ利用可能|東京都渋谷区神南1-1-1|
 |address-line2|	建物名を含む住所の自動入力	|渋谷ヒカリエ21階|
 |address-level1|	都道府県や州の自動入力	|東京都|
 |address-level2|	市区町村の自動入力	|渋谷区|
 |address-level3|	市区町村以下の地域の自動入力|	神南|
 |postal-code	|郵便番号の自動入力|	150-8510|
-|country	|国名の自動入力	|日本|
-
+|country	|国コードです。	|日本|
+|country-name	|国名です。	|日本|
 以下は、これらの値を使用して実装された住所の自動入力機能のサンプルです。
 
 html
@@ -45,4 +45,6 @@ html
 # 詳細情報
 
 1. [w3.org](https://www.w3.org/WAI/WCAG21/Techniques/html/H98)
-1. [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)
+2. [Living Standard — Last Updated 8 March 2023](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill)
+3. [HTML 属性: autocomplete](https://developer.mozilla.org/ja/docs/Web/HTML/Attributes/autocomplete)
+4. [ややこしい､フォームで使える住所系autocomplete属性の一覧と解説](https://blog.kentokanai.net/autocomplete/)
