@@ -21,13 +21,18 @@
       <h1>street address</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat orci eget massa consequat, id elementum augue luctus. Integer rutrum diam vitae lacus rhoncus venenatis. Sed sit amet mi vel lacus malesuada malesuada ac sed odio. Fusce tristique vestibulum augue eget molestie.</p>
     </main>
-<form>
-    郵便番号:<input type="text" autocomplete="postal-code" inputmode="numeric" placeholder="郵便番号" onKeyUp="AjaxZip3.zip2addr(this, '', '都道府県', '市区町村', '住所1行目');"><br>
-    都道府県:<input type="text" name="都道府県" autocomplete="address-level1" placeholder="都道府県"><br>
-    市区町村:<input type="text" name="市区町村" autocomplete="address-level2" placeholder="市区町村"><br>
-    住所1行目:<input type="text" name="住所1行目" autocomplete="street-line1" placeholder="住所1行目"><br>
-    住所2行目:<input type="text" name="住所2行目" autocomplete="street-line2" placeholder="住所2行目"><br>
-</form>
+    <form role="form">
+      <label for="postal-code">郵便番号:</label>
+      <input type="text" id="postal-code" autocomplete="postal-code" inputmode="numeric" placeholder="郵便番号" onKeyUp="AjaxZip3.zip2addr(this, '', 'address-level1', 'address-level2', 'street-address');"><br>
+      <label for="region">都道府県:</label>
+      <input type="text" id="region" name="region" autocomplete="address-level1" placeholder="都道府県"><br>
+      <label for="locality">市区町村:</label>
+      <input type="text" id="locality" name="locality" autocomplete="address-level2" placeholder="市区町村"><br>
+      <label for="street-address">住所1行目:</label>
+      <input type="text" id="street-address" name="street-address" autocomplete="street-address" placeholder="住所1行目"><br>
+      <label for="extended-address">住所2行目:</label>
+      <input type="text" id="extended-address" name="extended-address" autocomplete="address-line2" placeholder="住所2行目"><br>
+    </form>
     <footer>
       <p>&copy; 2023 </p>
     </footer>

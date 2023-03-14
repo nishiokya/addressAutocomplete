@@ -6,7 +6,7 @@
 
 
 |autocomplete属性	|説明	|iOS|Android|
-|---|---|---|
+|---|---|---|---|
 |postal-code	|郵便番号の自動入力|	-|-|
 |country	|国コードです。	|-|-|
 |country-name	|国名です。	|-|-|
@@ -46,6 +46,18 @@ html
 - ユーザーが入力する情報が正確になるため、間違いやタイポが減ります。
 
 
+# Browserごとの設定
+
+## Safari/Mac
+
+1. Safariブラウザを開きます。
+1. 「Safari」メニューから「環境設定」を選択します。
+1. 「自動入力」タブをクリックします。
+1. 「連絡先情報を使用」オプションにチェックを入れます。
+2. 「連絡先情報」ボタンをクリックします。
+3. 「連絡先」アプリが起動しますので、新しい住所を追加する場合は、「+」ボタンをクリックして住所を追加します。すでに住所が登録されている場合は、住所を選択して「OK」をクリックします。
+   1. ![safari](himage/../image/safari_autocomplete.png "サンプル")
+
 # 詳細情報
 
 1. [w3.org](https://www.w3.org/WAI/WCAG21/Techniques/html/H98)
@@ -53,3 +65,4 @@ html
 3. [HTML 属性: autocomplete](https://developer.mozilla.org/ja/docs/Web/HTML/Attributes/autocomplete)
 4. [ややこしい､フォームで使える住所系autocomplete属性の一覧と解説](https://blog.kentokanai.net/autocomplete/)
 5. [autocomplete属性のものすごく簡単なメモ](https://momdo.hatenablog.jp/entry/20230204/1675497918)
+6. [これだけは押さえよう！住所フォームの作り方](https://blog.kenall.jp/entry/address-form-best-practice)
