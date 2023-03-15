@@ -66,3 +66,5 @@ html
 4. [ややこしい､フォームで使える住所系autocomplete属性の一覧と解説](https://blog.kentokanai.net/autocomplete/)
 5. [autocomplete属性のものすごく簡単なメモ](https://momdo.hatenablog.jp/entry/20230204/1675497918)
 6. [これだけは押さえよう！住所フォームの作り方](https://blog.kenall.jp/entry/address-form-best-practice)
+7. [支払いフォームと住所フォームのベストプラクティス](https://web.dev/payment-and-address-form-best-practices/)
+8. [アドレスフォーム](https://web.dev/learn/forms/address/)
