@@ -1,50 +1,29 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>住所入力フォーム</title>
-    <style>
-      /* 入力フォームのスタイル */
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        background-color: #f1f1f1;
-        border-radius: 10px;
-      }
-      input {
-        margin-bottom: 10px;
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        font-size: 18px;
-      }
-      input[type="submit"] {
-        background-color: #4CAF50;
-        color: white;
-        cursor: pointer;
-      }
-      input[type="submit"]:hover {
-        background-color: #3e8e41;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>住所入力フォーム</h1>
-    <form>
-      <label for="postal-code">郵便番号:</label>
-      <input type="text" id="postal-code" name="postal-code" autocomplete="postal-code" required>
-      <label for="address-level1">都道府県:</label>
-      <input type="text" id="address-level1" name="address-level1" autocomplete="address-level1" required>
-      <label for="address-level2">市区町村:</label>
-      <input type="text" id="address-level2" name="address-level2" autocomplete="address-level2" required>
-      <label for="address-line1">住所1行目:</label>
-      <input type="text" id="address-line1" name="address-line1" autocomplete="address-line1" required>
-      <label for="address-line2">住所2行目:</label>
-      <input type="text" id="address-line2" name="address-line2" autocomplete="address-line2">
-      <input type="submit" value="送信">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="submit" method="POST">
+        <label for="postal-code">郵便番号:</label>
+        <input type="text" id="postal-code" name="postal_code" autocomplete="postal-code" required><br>
+
+        <label for="address-level1">都道府県:</label>
+        <input type="text" id="address-level1" name="address_level1" autocomplete="address-level1" required><br>
+
+        <label for="address-level2">市区町村:</label>
+        <input type="text" id="address-level2" name="address_level2" autocomplete="address-level2" required><br>
+
+        <label for="address-line1">番地:</label>
+        <input type="text" id="address-line1" name="address_line1" autocomplete="address-line1" required><br>
+
+        <label for="address-line2">建物名 (オプション):</label>
+        <input type="text" id="address-line2" name="address_line2" autocomplete="address-line2"><br>
+
+        <input type="submit" value="送信">
     </form>
-  </body>
+</body>
 </html>
-<script src="prefecue_autocomplete.js"></script>
