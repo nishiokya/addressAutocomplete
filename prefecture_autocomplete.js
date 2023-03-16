@@ -6,7 +6,7 @@ const inputField = document.getElementById("prefecture");
 // イベントリスナーの追加
 inputField.addEventListener("input", function() {
   const value = inputField.value;
-  const results = document.getElementById("results");
+  const results = document.getElementById("address-level1");
   results.innerHTML = "";
 
   // 入力値が空の場合は結果を非表示にする
