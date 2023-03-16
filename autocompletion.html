@@ -1,40 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML 属性: autocomplet - street address</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+    <title>住所入力フォーム</title>
+    <style>
+      /* 入力フォームのスタイル */
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #f1f1f1;
+        border-radius: 10px;
+      }
+      input {
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h1>street address</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat orci eget massa consequat, id elementum augue luctus. Integer rutrum diam vitae lacus rhoncus venenatis. Sed sit amet mi vel lacus malesuada malesuada ac sed odio. Fusce tristique vestibulum augue eget molestie.</p>
-    </main>
-    <form role="form">
+    <h1>住所入力フォーム</h1>
+    <form>
       <label for="postal-code">郵便番号:</label>
-      <input type="text" id="postal-code" autocomplete="postal-code" inputmode="numeric" placeholder="郵便番号" onKeyUp="AjaxZip3.zip2addr(this, '', 'address-level1', 'address-level2', 'street-address');"><br>
-      <label for="region">都道府県:</label>
-      <input type="text" id="region" name="region" autocomplete="address-level1" placeholder="都道府県"><br>
-      <label for="locality">市区町村:</label>
-      <input type="text" id="locality" name="locality" autocomplete="address-level2" placeholder="市区町村"><br>
-      <label for="street-address">住所1行目:</label>
-      <input type="text" id="street-address" name="street-address" autocomplete="street-address" placeholder="住所1行目"><br>
-      <label for="extended-address">住所2行目:</label>
-      <input type="text" id="extended-address" name="extended-address" autocomplete="address-line2" placeholder="住所2行目"><br>
+      <input type="text" id="postal-code" name="postal-code" autocomplete="postal-code" required>
+      <label for="address-level1">都道府県:</label>
+      <input type="text" id="address-level1" name="address-level1" autocomplete="address-level1" required>
+      <label for="address-level2">市区町村:</label>
+      <input type="text" id="address-level2" name="address-level2" autocomplete="address-level2" required>
+      <label for="address-line1">住所1行目:</label>
+      <input type="text" id="address-line1" name="address-line1" autocomplete="address-line1" required>
+      <label for="address-line2">住所2行目:</label>
+      <input type="text" id="address-line2" name="address-line2" autocomplete="address-line2">
+      <input type="submit" value="送信">
     </form>
-    <footer>
-      <p>&copy; 2023 </p>
-    </footer>
   </body>
 </html>
