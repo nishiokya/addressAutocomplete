@@ -10,4 +10,15 @@ async function loadPrefectures() {
     }
 }
 
+function toggleSuggest() {
+    const input = document.getElementById("address-level1");
+    const datalist = document.getElementById("prefectures");
+
+    if (input.value.length === 0) {
+        datalist.setAttribute("disabled", "");
+    } else {
+        datalist.removeAttribute("disabled");
+    }
+}
+
 loadPrefectures();
