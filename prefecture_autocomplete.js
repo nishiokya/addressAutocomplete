@@ -1,24 +1,42 @@
+let prefectures = [];
+
 async function loadPrefectures() {
     const response = await fetch("prefectures.json");
-    const prefectures = await response.json();
+    prefectures = await response.json();
+    updateSuggest("prefectures");
+}
+async function loadCitys() {
+    const response = await fetch("citys.json");
+    citys = await response.json();
+    updateSuggest("citys");
+}
+
+function updateSuggest( addressLevel) {
+    const input = document.getElementById("address-level1");
     const datalist = document.getElementById("prefectures");
 
+    datalist.innerHTML = "";
+
+    const searchValue = input.value.toLowerCase();
+
     for (const prefecture of prefectures) {
-        const option = document.createElement("option");
-        option.value = prefecture;
-        datalist.appendChild(option);
+        if (prefecture.ja.startsWith(searchValue) || prefecture.romaji.toLowerCase().startsWith(searchValue)) {
+            const option = document.createElement("option");
+            option.value = prefecture.ja;
+            datalist.appendChild(option);
+        }
     }
 }
 
 function toggleSuggest() {
     const input = document.getElementById("address-level1");
-    const datalist = document.getElementById("prefectures");
 
     if (input.value.length === 0) {
-        datalist.setAttribute("disabled", "");
-    } else {
-        datalist.removeAttribute("disabled");
+        updateSuggest();
     }
 }
 
+document.getElementById("address-level1").addEventListener("input", updateSuggest);
+
 loadPrefectures();
+loadCitys();

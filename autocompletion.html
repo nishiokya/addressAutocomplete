@@ -14,10 +14,12 @@
         <label for="address-level1">都道府県:</label>
         <input type="text" id="address-level1" name="address_level1" autocomplete="address-level1" list="prefectures" required>
         <datalist id="prefectures"></datalist>
+        <ul id="prefecture-suggestions" class="suggestions"></ul>
         
 
         <label for="address-level2">市区町村:</label>
         <input type="text" id="address-level2" name="address_level2" autocomplete="address-level2" required><br>
+        <ul id="city-suggestions" class="suggestions"></ul>
 
         <label for="address-line1">番地:</label>
         <input type="text" id="address-line1" name="address_line1" autocomplete="address-line1" required><br>
@@ -27,6 +29,7 @@
 
         <input type="submit" value="送信">
     </form>
-    <script src="prefecture_autocomplete.js"></script>
+    <script src="https://unpkg.com/normalize-japanese-addresses/dist/index.min.js"></script>
+    <script src="suggest.js" defer></script>
 </body>
 </html>
