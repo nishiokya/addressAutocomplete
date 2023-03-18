@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>住所入力フォーム</title>
+    <link rel="stylesheet" href="safari_styles.css">
+</head>
+<body>
+    <form class="address-form">
+        <label for="postal-code">郵便番号:</label>
+        <input type="text" id="postal-code" name="postal-code" placeholder="郵便番号を入力" autocomplete="postal-code">
+        
+        <label for="prefecture">都道府県:</label>
+        <input type="text" id="prefecture" name="prefecture" placeholder="都道府県を入力" autocomplete="address-level1">
+
+        <label for="city">市区町村:</label>
+        <input type="text" id="city" name="city" placeholder="市区町村を入力" autocomplete="address-level2">
+
+        <label for="street">番地:</label>
+        <input type="text" id="street" name="street" placeholder="番地を入力" autocomplete="address-line1">
+
+        <label for="building">建物名:</label>
+        <input type="text" id="building" name="building" placeholder="建物名を入力（任意）" autocomplete="address-line2">
+
+
+        <button type="submit">送信</button>
+    </form>
+    <!-- Add jQuery and jQuery UI -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</body>
+</html>
