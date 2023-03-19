@@ -22,7 +22,7 @@ autocompletion属性を使うことで、ユーザーの利便性が向上し、
 
 |autocomplete属性	|説明	|iOS|Android|
 |---|---|---|---|
-|postal-code	|郵便番号の自動入力|	-|-|
+|postal-code	|郵便番号|	-|-|
 |country	|国コードです。	|-|-|
 |country-name	|国名です。	|-|-|
 |address-level1|住所の一番上行政レベルです。これはふつう、住所がある都道府県です。合衆国では州になります。スイスでは、カートンになります。イギリスでは、ポストタウンになります。|都道府県|都道府県|
@@ -83,3 +83,8 @@ html
 6. [これだけは押さえよう！住所フォームの作り方](https://blog.kenall.jp/entry/address-form-best-practice)
 7. [支払いフォームと住所フォームのベストプラクティス](https://web.dev/payment-and-address-form-best-practices/)
 8. [アドレスフォーム](https://web.dev/learn/forms/address/)
+
+
+# 参照
+
+http://zipcloud.ibsnet.co.jp/rule/site
