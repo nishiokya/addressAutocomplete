@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chrome_styles.css">
+    <title>住所入力フォーム</title>
+</head>
+<body>
+    <main>
+        <h1>住所入力フォーム</h1>
+        <form action="#" method="post" autocomplete="on">
+            <label for="postal_code">郵便番号:</label>
+            <input type="text" id="postal_code" name="postal_code" autocomplete="postal-code" required aria-required="true" aria-describedby="postal_code_error">
+            <span id="postal_code_error" class="error" aria-hidden="true">郵便番号は必須項目です。</span>
+            
+            <label for="prefecture">都道府県:</label>
+            <input type="text" id="prefecture" name="prefecture" autocomplete="address-level1" required aria-required="true" aria-describedby="prefecture_error">
+            <span id="prefecture_error" class="error" aria-hidden="true">都道府県は必須項目です。</span>
+            
+            <label for="city">市区町村:</label>
+            <input type="text" id="city" name="city" autocomplete="address-level2" required aria-required="true" aria-describedby="city_error">
+            <span id="city_error" class="error" aria-hidden="true">市区町村は必須項目です。</span>
+            
+            <label for="street_address">番地:</label>
+            <input type="text" id="street_address" name="street_address" autocomplete="address-line1" required aria-required="true" aria-describedby="street_address_error">
+            <span id="street_address_error" class="error" aria-hidden="true">番地は必須項目です。</span>
+            
+            <label for="building_name">建物名:</label>
+            <input type="text" id="building_name" name="building_name" autocomplete="address-line2">
+            
+            <button type="submit">送信</button>
+        </form>
+    </main>
+    <script src="zip-address-autocomplete.js" defer></script>
+</body>
+</html>
