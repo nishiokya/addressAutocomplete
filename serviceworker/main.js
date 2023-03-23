@@ -49,6 +49,7 @@ async function initAutocomplete() {
   searchInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
       saveInputHistory(searchInput.value);
+      console.log(searchInput.value)
     }
   });
 }
