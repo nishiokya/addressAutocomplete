@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="chrome_styles.css">
     <title>住所入力フォーム</title>
-
+</head>
 <body>
     <main>
         <h1>住所入力フォーム</h1>
@@ -17,10 +17,12 @@
             <label for="prefecture">都道府県:</label>
             <input type="text" id="prefecture" name="prefecture" autocomplete="address-level1" required aria-required="true" aria-describedby="prefecture_error">
             <span id="prefecture_error" class="error" aria-hidden="true">都道府県は必須項目です。</span>
+            <div id="prefecture-suggestions" class="suggestions"></div>
             
             <label for="city">市区町村:</label>
             <input type="text" id="city" name="city" autocomplete="address-level2" required aria-required="true" aria-describedby="city_error">
             <span id="city_error" class="error" aria-hidden="true">市区町村は必須項目です。</span>
+            <div id="city-suggestions" class="suggestions"></div>
             
             <label for="street_address">番地:</label>
             <input type="text" id="street_address" name="street_address" autocomplete="address-line1" required aria-required="true" aria-describedby="street_address_error">

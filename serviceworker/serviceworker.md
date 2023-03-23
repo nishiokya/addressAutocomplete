@@ -1,0 +1,15 @@
+main.jsファイルは、サービスワーカーと連携して入力履歴を保存・取得し、autoComplete.jsを利用してクエリサジェストを提供するためのコードです。以下にコードの詳細を説明します。
+
+# loadInputHistory()
+この非同期関数は、サービスワーカーから入力履歴を取得するために使用されます。サービスワーカーが利用可能であれば、GET_INPUT_HISTORYタイプのメッセージをサービスワーカーに送信します。その後、サービスワーカーから入力履歴データを受け取り、Promiseを解決します。サービスワーカーが利用できない場合、空の配列を解決します。
+
+# initAutocomplete()
+この非同期関数は、autoComplete.jsを初期化するために使用されます。まず、loadInputHistory()を呼び出して入力履歴を取得します。次に、取得した入力履歴をデータソースとしてautoComplete.jsインスタンスを作成し、入力要素に適用します。最後に、autoComplete.jsのonSelectionイベントハンドラにsaveInputHistory()関数を設定します。
+
+# saveInputHistory(value)
+この関数は、入力された値をサービスワーカーに保存するために使用されます。サービスワーカーが利用可能であれば、SAVE_INPUT_HISTORYタイプのメッセージをサービスワーカーに送信し、入力データを添付します。
+
+# initAutocomplete()の呼び出し
+最後に、initAutocomplete()関数を呼び出して、autoComplete.jsを初期化し、サジェスト機能を実装します。
+
+このコード全体を通じて、サービスワーカーと連携して入力履歴を保存・取得し、autoComplete.jsを使用してクエリサジェストを提供することができます。
