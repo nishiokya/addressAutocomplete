@@ -45,7 +45,14 @@ async function initAutocomplete() {
       saveInputHistory(feedback.selection.value);
     },
   });
+
+  searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      saveInputHistory(searchInput.value);
+    }
+  });
 }
+
 
 function saveInputHistory(value) {
   if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
