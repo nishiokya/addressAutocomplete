@@ -66,12 +66,17 @@ async function initAutocomplete() {
 
 
 function saveInputHistory(value) {
-  if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
-    navigator.serviceWorker.controller.postMessage({
+  const isServiceWorkerAvailable = 'serviceWorker' in navigator && navigator.serviceWorker.controller;
+
+  if (isServiceWorkerAvailable) {
+    const inputData = {
       type: 'SAVE_INPUT_HISTORY',
       inputData: value,
-    });
+    };
+    
+    navigator.serviceWorker.controller.postMessage(inputData);
   }
 }
+
 
 initAutocomplete();
