@@ -60,7 +60,6 @@ html
 - ユーザーが入力する必要がある情報が少なくなるため、入力時間が短縮されます。
 - ユーザーが入力する情報が正確になるため、間違いやタイポが減ります。
 
-テスト
 
 # Browserごとの設定
 
@@ -86,6 +85,6 @@ html
 8. [アドレスフォーム](https://web.dev/learn/forms/address/)
 
 
-# 参照
+# 参照情報
 
 http://zipcloud.ibsnet.co.jp/rule/site
